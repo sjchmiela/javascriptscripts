@@ -46,5 +46,4 @@ function LolLooksLikeYouveGotRetina()
 			images[i].src.replace(/\.[a-z]+$/,'@2x$&'));
 	}
 }
-
-window.onload = LolLooksLikeYouveGotRetina;
+if(window.devicePixelRatio > 2) { window.onload = LolLooksLikeYouveGotRetina; }
