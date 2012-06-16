@@ -35,15 +35,18 @@
  * 
  */
 
-function LolLooksLikeYouveGotRetina()
+if(window.devicePixelRatio > 1)
 {
-	var images = document.getElementsByClassName("retina");
-	for(var i = 0; i<images.length; i++)
+	function LolLooksLikeYouveGotRetina()
 	{
-		images[i].width = images[i].width;
-		images[i].height = images[i].height;
-		images[i].setAttribute('src',
-			images[i].src.replace(/\.[a-z]+$/,'@2x$&'));
+		var images = document.getElementsByClassName("retina");
+		for(var i = 0; i<images.length; i++)
+		{
+			images[i].width = images[i].width;
+			images[i].height = images[i].height;
+			images[i].setAttribute('src',
+			   images[i].src.replace(/\.[a-z]+$/,'@2x$&'));
+		}
 	}
+	window.addEventListener('load', LolLooksLikeYouveGotRetina, false);
 }
-if(window.devicePixelRatio > 1) { window.addEventListener('load',LolLooksLikeYouveGotRetina, false); }
