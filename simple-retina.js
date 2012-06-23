@@ -48,5 +48,5 @@ if(window.devicePixelRatio > 1)
 			   images[i].src.replace(/\.[a-z]+$/,'@2x$&'));
 		}
 	}
-	window.addEventListener('load', LolLooksLikeYouveGotRetina, false);
+	window.addEventListener('DOMContentLoaded', LolLooksLikeYouveGotRetina, false);
 }
