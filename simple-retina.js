@@ -42,8 +42,6 @@ if(window.devicePixelRatio > 1)
 		var images = document.getElementsByClassName("retina");
 		for(var i = 0; i<images.length; i++)
 		{
-			images[i].width = images[i].width;
-			images[i].height = images[i].height;
 			images[i].setAttribute('src',
 			   images[i].src.replace(/\.[a-z]+$/,'@2x$&'));
 		}
